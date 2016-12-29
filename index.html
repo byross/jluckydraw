@@ -37,6 +37,10 @@
 畢十
                      </textarea>
             </div>
+            <div id="result_pane" style="display: none;">
+                <p><strong>得獎名單</strong></p>
+                <textarea id="result_list"></textarea>
+            </div>
             <div style="width: 100%; display: inline-block;">
             <button id="bt_name_list" class="css3button2">Hide the list</button>
             </div>
@@ -50,6 +54,7 @@
 
                 $( "#bt_name_list" ).click(function() {
                     $('#list_pane').toggle();
+                    $('#result_pane').toggle();
                     $(this).text(function(i, text){
                         return text === "Hide the list" ? "Show the list" : "Hide the list";
                     })

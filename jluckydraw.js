@@ -56,12 +56,14 @@ $(document).ready(function() {
             clearInterval(intervalID);
             $("#switch").data("status", "stopped");
             $("#switch").text($("#switch").data("origin_text"));
-
+            // move the winner to result list
             var list_str = $("#name_list").val();
-            var new_list_str = list_str.replace($("#draw-3 .text").text(),"");
-            //alert(new_list_str);
-
+            var new_list_str = list_str.replace($("#draw-3 .text").text()+"\n","");
             $("#name_list").val(new_list_str);
+
+            var rlist_str = $("#result_list").val();
+            rlist_str += $("#draw-3 .text").text()+"\n";
+            $("#result_list").val(rlist_str);
 
 
         }

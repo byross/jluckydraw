@@ -13,7 +13,7 @@ a:hover { color: #cc3366; }
     left: 50%;
     margin: -9em auto 0 -11.5em;
     position: absolute;
-    top: 25%;
+    top: 50%;
     width: 23em;
 }
 
@@ -29,7 +29,7 @@ a:hover { color: #cc3366; }
     width: 13em;
 }
 
-#name_list {
+#name_list,#result_list {
     font-family: Microsoft JhengHei,Lucida Grande,Lucida Sans,Arial,sans-serif;
     font-size: 1em;
     height: 14em;
