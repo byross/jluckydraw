@@ -45,7 +45,7 @@ $(document).ready(function() {
         if ($("#switch").data("status") == "stopped") {
             $("#switch").data("status", "rolling");
             
-            $("#switch").text("停～！");
+            $("#switch").text("Stop");
             
             names = parseList("#name_list");
             $("#name_list").data('names', names);
@@ -56,6 +56,14 @@ $(document).ready(function() {
             clearInterval(intervalID);
             $("#switch").data("status", "stopped");
             $("#switch").text($("#switch").data("origin_text"));
+
+            var list_str = $("#name_list").val();
+            var new_list_str = list_str.replace($("#draw-3 .text").text(),"");
+            //alert(new_list_str);
+
+            $("#name_list").val(new_list_str);
+
+
         }
     });
 });

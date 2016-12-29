@@ -3,7 +3,7 @@
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
         <title>JLuckyDraw 抽籤機</title> 
         <meta name="author" content="Jui-Shan Liang" /> 
-        <link rel="stylesheet" href="jquery-ui-1.8.16.custom.css" type="text/css" />
+        <!--link rel="stylesheet" href="jquery-ui-1.8.16.custom.css" type="text/css" /-->
         <link rel="stylesheet" href="style.css" type="text/css" />
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" type="text/javascript"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
@@ -12,9 +12,19 @@
 
     <body>
         <div id="container">
+            <div id="draw_pane">
+                <div id="draw">
+                    <div id="draw-1" class="draw-a"><div class="text">&nbsp;</div></div>
+                    <div id="draw-2" class="draw-b"><div class="text">&nbsp;</div></div>
+                    <div id="draw-3" class="draw-c"><div class="text">&nbsp;</div></div>
+                    <div id="draw-4" class="draw-b"><div class="text">&nbsp;</div></div>
+                    <div id="draw-5" class="draw-a"><div class="text">&nbsp;</div></div>
+                </div>
+                <button id="switch" class="css3button">Start</button>
+            </div>
             <div id="list_pane">
-                    <p><strong>抽籤名單</strong></p>
-                    <textarea id="name_list">
+                <p><strong>抽籤名單</strong></p>
+                <textarea id="name_list">
 陳一
 徐二
 張三
@@ -25,22 +35,30 @@
 孫八
 錢九
 畢十
-</textarea>
+                     </textarea>
             </div>
-            <div id="draw_pane">
-                <div id="draw">
-                    <div id="draw-1" class="draw-a"><div class="text">&nbsp;</div></div>
-                    <div id="draw-2" class="draw-b"><div class="text">&nbsp;</div></div>
-                    <div id="draw-3" class="draw-c"><div class="text">&nbsp;</div></div>
-                    <div id="draw-4" class="draw-b"><div class="text">&nbsp;</div></div>
-                    <div id="draw-5" class="draw-a"><div class="text">&nbsp;</div></div>
-                </div>
-                <button id="switch">開始抽籤</button>
+            <div style="width: 100%; display: inline-block;">
+            <button id="bt_name_list" class="css3button2">Hide the list</button>
             </div>
         </div>
-        <div id="footer">
+
+        <div id="footer" style="display: none;">
             程式撰寫：梁睿珊 (jsliang.tw[at]gmail.com) 2011/12/30
         </div>
+        <script>
+            $(function() {
+
+                $( "#bt_name_list" ).click(function() {
+                    $('#list_pane').toggle();
+                    $(this).text(function(i, text){
+                        return text === "Hide the list" ? "Show the list" : "Hide the list";
+                    })
+                });
+
+
+
+            });
+        </script>
     </body> 
      
 </html>

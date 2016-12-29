@@ -13,18 +13,18 @@ a:hover { color: #cc3366; }
     left: 50%;
     margin: -9em auto 0 -11.5em;
     position: absolute;
-    top: 50%;
+    top: 25%;
     width: 23em;
 }
 
 #list_pane {
-    float: left;
+    display: inline-block;
     height: 18em;
     width: 10em;
 }
 
 #draw_pane {
-    float: right;
+    display: inline-block;
     height: 18em;
     width: 13em;
 }
@@ -43,7 +43,52 @@ a:hover { color: #cc3366; }
     height: 2.4em;
     margin-top: 0.4em;
     width: 100%;
+    padding: 14px 11px;
 }
+
+button.css3button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #ffa200;
+    padding: 10px 20px;
+
+    background: -moz-linear-gradient(
+            top,
+            #ffffff 0%,
+            #ffffff 50%,
+            #d6d6d6);
+    background: -webkit-gradient(
+            linear, left top, left bottom,
+            from(#ffffff),
+            color-stop(0.50, #ffffff),
+            to(#d6d6d6));
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 3px solid #ffbf00;
+    -moz-box-shadow:
+            0px 1px 3px rgba(000,000,000,0.5),
+            inset 0px 0px 3px rgba(255,255,255,1);
+    -webkit-box-shadow:
+            0px 1px 3px rgba(000,000,000,0.5),
+            inset 0px 0px 3px rgba(255,255,255,1);
+    box-shadow:
+            0px 1px 3px rgba(000,000,000,0.5),
+            inset 0px 0px 3px rgba(255,255,255,1);
+    text-shadow:
+            0px -1px 0px rgba(000,000,000,0.1),
+            -12px 3px 0px rgba(168,039,168,0);
+}
+
+button.css3button2 {
+    width: 130px;
+    height: 30px;
+    margin: auto;
+}
+
+
+
+
 
 #draw {
     font-size: 2em;
